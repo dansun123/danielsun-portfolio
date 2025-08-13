@@ -2,7 +2,26 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { Download, Briefcase, GraduationCap, Code2, Award } from "lucide-react";
+import {
+  Download,
+  Briefcase,
+  GraduationCap,
+  Code2,
+  Award,
+  Trophy,
+  Brain,
+  Target,
+  Star,
+  Zap,
+  BookOpen,
+  Users,
+  Rocket,
+  TrendingUp,
+  Building2,
+  Sparkles,
+  Fish,
+  DollarSign,
+} from "lucide-react";
 import { useState } from "react";
 import { cn } from "@/lib/utils";
 
@@ -69,42 +88,170 @@ const education = [
 
 const skillCategories = [
   {
-    name: "Languages",
-    skills: ["Python", "Java", "React", "TypeScript", "SQL", "C++", "OCaml"],
+    name: "Programming Languages",
+    skills: [
+      "Python",
+      "TypeScript",
+      "Java",
+      "C++",
+      "SQL",
+      "OCaml",
+      "JavaScript",
+    ],
     color: "text-blue-600",
+    icon: Code2,
   },
   {
-    name: "Web Development",
+    name: "Web & Mobile",
     skills: [
       "React",
-      "NodeJS",
-      "TypeScript",
       "Next.js",
-      "HTML/CSS",
+      "Node.js",
       "REST APIs",
+      "GraphQL",
+      "Tailwind CSS",
+      "MongoDB",
     ],
     color: "text-green-600",
+    icon: Zap,
+  },
+  {
+    name: "AI & Data Science",
+    skills: [
+      "Machine Learning",
+      "Deep Learning",
+      "TensorFlow",
+      "PyTorch",
+      "Data Analysis",
+      "NLP",
+    ],
+    color: "text-purple-600",
+    icon: Brain,
+  },
+  {
+    name: "Finance & Trading",
+    skills: [
+      "Options Trading",
+      "Quantitative Analysis",
+      "Risk Management",
+      "Market Making",
+      "Algorithmic Trading",
+    ],
+    color: "text-orange-600",
+    icon: Target,
+  },
+  {
+    name: "Leadership & Teaching",
+    skills: [
+      "Curriculum Development",
+      "Public Speaking",
+      "Team Management",
+      "Mentoring",
+      "Event Planning",
+    ],
+    color: "text-pink-600",
+    icon: Users,
   },
   {
     name: "Tools & Platforms",
-    skills: ["Git", "LaTeX", "Growth", "Docker", "AWS", "Linux"],
+    skills: ["Git", "Docker", "AWS", "Linux", "LaTeX", "Figma", "Vercel"],
     color: "text-red-600",
+    icon: Star,
+  },
+];
+
+const awards = [
+  {
+    title: "USA Math Olympiad Summer Program (MOP)",
+    description: "Top 50 USA Math Olympiad scorers nationwide",
+    year: "2016",
+    category: "Mathematics",
+    icon: Trophy,
   },
   {
-    name: "Interests",
-    skills: [
-      "Education",
-      "Building Webapp Games",
-      "American Ninja Warrior",
-      "Poker",
-      "Basketball",
+    title: "3x USA Math Olympiad Qualifier",
+    description: "Top 250 USA Math students nationwide",
+    year: "2016-2018",
+    category: "Mathematics",
+    icon: Brain,
+  },
+  {
+    title: "3x USA Physics Olympiad Semifinalist",
+    description: "Top 100 USA Physics Olympiad scorers nationwide",
+    year: "2016-2018",
+    category: "Physics",
+    icon: Zap,
+  },
+  {
+    title: "Regeneron Science Talent Search",
+    description: "Top 300 research projects nationwide",
+    year: "2018",
+    category: "Research",
+    icon: BookOpen,
+  },
+  {
+    title: "USABO and USANCO Finalist",
+    description: "Olympiad Finalist for Biology and Chemistry Olympiads",
+    year: "2017",
+    category: "Biology and Chemistry",
+    icon: Target,
+  },
+  {
+    title: "Y Combinator W24",
+    description: "Selected for prestigious startup accelerator with MathDash",
+    year: "2024",
+    category: "Entrepreneurship",
+    icon: Star,
+  },
+];
+
+const projects = [
+  {
+    name: "MathDash",
+    description: "Personalized math training platform",
+    highlights: [
+      "Building the best way to learn math",
+      "Personalized explanations for every problem so you never get stuck",
+      "YC W24, backed by Google Ventures",
     ],
-    color: "text-purple-600",
+    category: "Entrepreneurship",
+  },
+  {
+    name: "MIT Web.Lab",
+    description:
+      "Co-President & Academic Chair of MIT's premier web development course",
+    highlights: [
+      "Taught 900+ students",
+      "Developed MERN stack curriculum",
+      "Led 20+ staff members",
+    ],
+    category: "Leadership",
+  },
+  {
+    name: "MIT Poker Club",
+    description: "President, taught game theory and probability",
+    highlights: [
+      "Taught 15.S50 Sloan course",
+      "Founded education initiative, teaching poker theory to 1000+ students",
+      "Founded Collegiate Series of Poker, the first college-level poker tournament",
+    ],
+    category: "Leadership",
+  },
+  {
+    name: "Interstellar",
+    description:
+      "Social forum for MIT students to share course information and connect",
+    highlights: [
+      "HackLodge 2020 winner",
+      "1000+ student users",
+      "Full-stack development",
+    ],
+    category: "Development",
   },
 ];
 
 export default function Resume() {
-  const [activeTab, setActiveTab] = useState("experience");
+  const [activeTab, setActiveTab] = useState("overview");
 
   return (
     <div className="min-h-screen py-12 px-4 sm:px-6 lg:px-8">
@@ -116,33 +263,14 @@ export default function Resume() {
           transition={{ duration: 0.5 }}
           className="text-center mb-12"
         >
-          {/* Professional Photo */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.5, delay: 0.1 }}
-            className="mb-6 flex justify-center"
-          >
-            <div className="relative w-32 h-32 rounded-full overflow-hidden border-4 border-primary/20 shadow-xl">
-              <Image
-                src="/images/profile-professional.jpg"
-                alt="Daniel Sun - Professional"
-                fill
-                className="object-cover object-top"
-              />
-            </div>
-          </motion.div>
           <h1 className="text-4xl sm:text-5xl font-heading font-bold mb-4">
-            My <span className="gradient-text">Resume</span>
+            My <span className="gradient-text">Achievements & Experience</span>
           </h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-6">
-            MIT Computer Science graduate with experience in quantitative
-            trading and full-stack development
+            From Math Olympiad to YC founder - a journey through competitive
+            mathematics, MIT education, quantitative finance, and building the
+            future of education.
           </p>
-          <button className="inline-flex items-center px-6 py-3 bg-primary text-primary-foreground rounded-lg font-medium hover-lift">
-            <Download className="mr-2 h-5 w-5" />
-            Download PDF Resume
-          </button>
         </motion.div>
 
         {/* Tab Navigation */}
@@ -153,7 +281,7 @@ export default function Resume() {
           className="flex justify-center mb-12"
         >
           <div className="inline-flex rounded-lg border p-1">
-            {["experience", "education", "skills"].map((tab) => (
+            {["overview", "experience", "education", "skills"].map((tab) => (
               <button
                 key={tab}
                 onClick={() => setActiveTab(tab)}
@@ -177,6 +305,237 @@ export default function Resume() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.3 }}
         >
+          {/* Overview Section */}
+          {activeTab === "overview" && (
+            <div className="space-y-12">
+              {/* Awards & Achievements Grid */}
+              <div>
+                <h2 className="text-2xl font-heading font-bold mb-6 flex items-center justify-center">
+                  <Trophy className="h-6 w-6 mr-2 text-primary" />
+                  Awards & Achievements
+                </h2>
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                  {awards.map((award, index) => {
+                    const Icon = award.icon;
+                    return (
+                      <motion.div
+                        key={index}
+                        initial={{ opacity: 0, scale: 0.9 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        transition={{ duration: 0.3, delay: index * 0.05 }}
+                        className="bg-card p-4 rounded-lg border hover-lift group"
+                      >
+                        <div className="flex items-start gap-3">
+                          <div className="p-2 rounded-lg bg-primary/10 group-hover:bg-primary/20 transition-colors">
+                            <Icon className="h-5 w-5 text-primary" />
+                          </div>
+                          <div className="flex-1">
+                            <h3 className="font-semibold text-sm mb-1">
+                              {award.title}
+                            </h3>
+                            <p className="text-xs text-muted-foreground mb-2">
+                              {award.description}
+                            </p>
+                            <div className="flex items-center gap-2">
+                              <span className="text-xs bg-muted px-2 py-0.5 rounded">
+                                {award.category}
+                              </span>
+                              <span className="text-xs text-primary">
+                                {award.year}
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                      </motion.div>
+                    );
+                  })}
+                </div>
+              </div>
+
+              {/* Key Projects & Leadership */}
+              <div>
+                <h2 className="text-2xl font-heading font-bold mb-6 flex items-center justify-center">
+                  <Star className="h-6 w-6 mr-2 text-primary" />
+                  Key Projects & Leadership
+                </h2>
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                  {projects.map((project, index) => (
+                    <motion.div
+                      key={index}
+                      initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{ duration: 0.3, delay: index * 0.1 }}
+                      className="bg-card p-6 rounded-lg border hover-lift"
+                    >
+                      <div className="mb-3">
+                        <h3 className="text-lg font-semibold mb-1">
+                          {project.name}
+                        </h3>
+                        <span className="text-xs bg-primary/10 text-primary px-2 py-1 rounded">
+                          {project.category}
+                        </span>
+                      </div>
+                      <p className="text-sm text-muted-foreground mb-3">
+                        {project.description}
+                      </p>
+                      <div className="space-y-1">
+                        {project.highlights.map((highlight, idx) => (
+                          <div key={idx} className="flex items-center text-xs">
+                            <span className="text-primary mr-2">•</span>
+                            <span className="text-muted-foreground">
+                              {highlight}
+                            </span>
+                          </div>
+                        ))}
+                      </div>
+                    </motion.div>
+                  ))}
+                </div>
+              </div>
+
+              {/* Work Experience Highlights */}
+              <div>
+                <h2 className="text-2xl font-heading font-bold mb-6 flex items-center justify-center">
+                  <Briefcase className="h-6 w-6 mr-2 text-primary" />
+                  Professional Journey
+                </h2>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                  <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.3, delay: 0.1 }}
+                    className="bg-gradient-to-br from-blue-500/10 to-purple-500/10 p-6 rounded-lg border hover-lift"
+                  >
+                    <div className="flex items-start gap-3">
+                      <div className="p-2 rounded-lg bg-primary/10">
+                        <Rocket className="h-5 w-5 text-primary" />
+                      </div>
+                      <div>
+                        <h3 className="font-semibold mb-1">MathDash</h3>
+                        <p className="text-sm text-muted-foreground mb-2">Co-founder & CEO</p>
+                        <p className="text-xs text-muted-foreground">
+                          Building personalized AI-powered math education platform • YC W24 • Google Ventures backed
+                        </p>
+                      </div>
+                    </div>
+                  </motion.div>
+
+                  <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.3, delay: 0.2 }}
+                    className="bg-gradient-to-br from-green-500/10 to-blue-500/10 p-6 rounded-lg border hover-lift"
+                  >
+                    <div className="flex items-start gap-3">
+                      <div className="p-2 rounded-lg bg-primary/10">
+                        <TrendingUp className="h-5 w-5 text-primary" />
+                      </div>
+                      <div>
+                        <h3 className="font-semibold mb-1">Jane Street</h3>
+                        <p className="text-sm text-muted-foreground mb-2">Quantitative Trader</p>
+                        <p className="text-xs text-muted-foreground">
+                          Options desk trading • Built models & trading systems • Coached mock trading
+                        </p>
+                      </div>
+                    </div>
+                  </motion.div>
+
+                  <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.3, delay: 0.3 }}
+                    className="bg-gradient-to-br from-orange-500/10 to-red-500/10 p-6 rounded-lg border hover-lift"
+                  >
+                    <div className="flex items-start gap-3">
+                      <div className="p-2 rounded-lg bg-primary/10">
+                        <Building2 className="h-5 w-5 text-primary" />
+                      </div>
+                      <div>
+                        <h3 className="font-semibold mb-1">Kalshi</h3>
+                        <p className="text-sm text-muted-foreground mb-2">Trader & Head of Engineering</p>
+                        <p className="text-xs text-muted-foreground">
+                          Built $100k+/day trading system • Grew userbase from 0 to 10,000+
+                        </p>
+                      </div>
+                    </div>
+                  </motion.div>
+                </div>
+              </div>
+
+              {/* Fun Achievements */}
+              <div>
+                <h2 className="text-2xl font-heading font-bold mb-6 flex items-center justify-center">
+                  <Sparkles className="h-6 w-6 mr-2 text-primary" />
+                  Fun Achievements & Competitions
+                </h2>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                  <motion.div
+                    initial={{ opacity: 0, scale: 0.9 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 0.3, delay: 0.4 }}
+                    className="bg-gradient-to-r from-red-500/10 to-orange-500/10 p-5 rounded-lg border hover-lift group"
+                  >
+                    <div className="flex items-center gap-3 mb-2">
+                      <div className="p-2 rounded-lg bg-primary/10 group-hover:bg-primary/20 transition-colors">
+                        <Target className="h-5 w-5 text-primary" />
+                      </div>
+                      <h3 className="font-semibold text-sm">American Ninja Warrior</h3>
+                    </div>
+                    <p className="text-xs text-muted-foreground">
+                      Selected as contestant from 100,000+ applicants • Competed on national television showcasing athletic prowess
+                    </p>
+                    <div className="mt-2">
+                      <span className="text-xs bg-red-500/10 text-red-600 px-2 py-0.5 rounded">Athletics</span>
+                      <span className="text-xs text-primary ml-2">2021-22</span>
+                    </div>
+                  </motion.div>
+
+                  <motion.div
+                    initial={{ opacity: 0, scale: 0.9 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 0.3, delay: 0.5 }}
+                    className="bg-gradient-to-r from-blue-500/10 to-cyan-500/10 p-5 rounded-lg border hover-lift group"
+                  >
+                    <div className="flex items-center gap-3 mb-2">
+                      <div className="p-2 rounded-lg bg-primary/10 group-hover:bg-primary/20 transition-colors">
+                        <Fish className="h-5 w-5 text-primary" />
+                      </div>
+                      <h3 className="font-semibold text-sm">MOP Fish Champion</h3>
+                    </div>
+                    <p className="text-xs text-muted-foreground">
+                      Won the legendary card game tournament at Math Olympiad Summer Program • Beat 50+ top math minds
+                    </p>
+                    <div className="mt-2">
+                      <span className="text-xs bg-blue-500/10 text-blue-600 px-2 py-0.5 rounded">Strategy Games</span>
+                      <span className="text-xs text-primary ml-2">2016</span>
+                    </div>
+                  </motion.div>
+
+                  <motion.div
+                    initial={{ opacity: 0, scale: 0.9 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 0.3, delay: 0.6 }}
+                    className="bg-gradient-to-r from-green-500/10 to-emerald-500/10 p-5 rounded-lg border hover-lift group"
+                  >
+                    <div className="flex items-center gap-3 mb-2">
+                      <div className="p-2 rounded-lg bg-primary/10 group-hover:bg-primary/20 transition-colors">
+                        <DollarSign className="h-5 w-5 text-primary" />
+                      </div>
+                      <h3 className="font-semibold text-sm">Figgie Tournament Winner</h3>
+                    </div>
+                    <p className="text-xs text-muted-foreground">
+                      Triumphed at Jane Street&apos;s game theory competition • Demonstrated exceptional trading & probability skills
+                    </p>
+                    <div className="mt-2">
+                      <span className="text-xs bg-green-500/10 text-green-600 px-2 py-0.5 rounded">Trading Games</span>
+                      <span className="text-xs text-primary ml-2">2023</span>
+                    </div>
+                  </motion.div>
+                </div>
+              </div>
+            </div>
+          )}
+
           {/* Experience Section */}
           {activeTab === "experience" && (
             <div className="space-y-8">
@@ -307,8 +666,7 @@ export default function Resume() {
                   <li className="flex items-start">
                     <span className="text-primary mr-2">•</span>
                     <span className="text-muted-foreground">
-                      American Ninja Warrior Contestant - Top 400 out of &gt;
-                      100,000 applicants (2021-22)
+                      USABO and USANCO Finalist (2017)
                     </span>
                   </li>
                 </ul>
@@ -346,7 +704,7 @@ export default function Resume() {
                   </div>
                   <div>
                     <h4 className="font-semibold">
-                      MIT Poker Club - Co-President & Events Director
+                      MIT Poker Club - President
                     </h4>
                     <p className="text-sm text-muted-foreground">
                       Cambridge, MA | Sep 2018 - Present
@@ -382,7 +740,11 @@ export default function Resume() {
                   className="bg-card p-6 rounded-lg border hover-lift"
                 >
                   <h3 className="text-lg font-semibold mb-4 flex items-center">
-                    <Code2 className={cn("h-5 w-5 mr-2", category.color)} />
+                    {category.icon && (
+                      <category.icon
+                        className={cn("h-5 w-5 mr-2", category.color)}
+                      />
+                    )}
                     {category.name}
                   </h3>
                   <div className="flex flex-wrap gap-2">
@@ -398,39 +760,43 @@ export default function Resume() {
                 </motion.div>
               ))}
 
-              {/* Additional Skills */}
+              {/* Personal Interests & Activities */}
               <motion.div
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.3, delay: 0.5 }}
-                className="md:col-span-2 bg-card p-6 rounded-lg border"
+                transition={{ duration: 0.3, delay: 0.6 }}
+                className="md:col-span-2 bg-gradient-to-r from-primary/10 to-primary/5 p-6 rounded-lg border border-primary/20"
               >
-                <h3 className="text-lg font-semibold mb-4">
-                  Other Skills & Interests
+                <h3 className="text-lg font-semibold mb-4 flex items-center">
+                  <Trophy className="h-5 w-5 mr-2 text-primary" />
+                  Personal Interests & Activities
                 </h3>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                   <div>
-                    <p className="font-medium mb-2">Soft Skills</p>
+                    <p className="font-medium mb-2">Competitive Pursuits</p>
                     <ul className="text-sm text-muted-foreground space-y-1">
-                      <li>• Team Leadership</li>
-                      <li>• Product Development</li>
-                      <li>• User Research</li>
+                      <li>• American Ninja Warrior</li>
+                      <li>• Poker Strategy</li>
+                      <li>• Basketball</li>
+                      <li>• Math Competitions</li>
                     </ul>
                   </div>
                   <div>
-                    <p className="font-medium mb-2">Design</p>
+                    <p className="font-medium mb-2">Creative Projects</p>
                     <ul className="text-sm text-muted-foreground space-y-1">
-                      <li>• Photoshop</li>
+                      <li>• Building Webapp Games</li>
+                      <li>• Educational Content</li>
                       <li>• UI/UX Design</li>
-                      <li>• Wireframing</li>
+                      <li>• Problem Writing</li>
                     </ul>
                   </div>
                   <div>
-                    <p className="font-medium mb-2">Interests</p>
+                    <p className="font-medium mb-2">Mission & Values</p>
                     <ul className="text-sm text-muted-foreground space-y-1">
-                      <li>• Education Technology</li>
+                      <li>• Education Equity</li>
                       <li>• Social Impact</li>
-                      <li>• Game Development</li>
+                      <li>• Mentoring Youth</li>
+                      <li>• Building Community</li>
                     </ul>
                   </div>
                 </div>

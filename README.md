@@ -27,17 +27,20 @@ Visit: [danieldsun.com](https://danieldsun.com)
 ## 📦 Installation
 
 1. Clone the repository:
+
 ```bash
 git clone https://github.com/dansun123/danielsun-portfolio.git
 cd danielsun-portfolio
 ```
 
 2. Install dependencies:
+
 ```bash
 npm install
 ```
 
 3. Run the development server:
+
 ```bash
 npm run dev
 ```
@@ -94,7 +97,7 @@ MIT License - feel free to use this code for your own portfolio!
 
 ## 📧 Contact
 
-- Email: sundanield@gmail.com
+- Email: daniel@mathdash.com
 - LinkedIn: [Daniel Sun](https://www.linkedin.com/in/daniel-sun-440493171/)
 - GitHub: [@dansun123](https://github.com/dansun123)
 

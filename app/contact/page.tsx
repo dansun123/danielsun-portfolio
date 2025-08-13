@@ -1,18 +1,18 @@
-"use client"
+"use client";
 
-import { motion } from "framer-motion"
-import { Mail, Github, Linkedin, Twitter, MapPin, Send, MessageSquare } from "lucide-react"
-import Link from "next/link"
-import { useState } from "react"
+import { motion } from "framer-motion";
+import {
+  Mail,
+  Linkedin,
+  Twitter,
+  MapPin,
+  Send,
+  MessageSquare,
+} from "lucide-react";
+import Link from "next/link";
+import { useState } from "react";
 
 const socialLinks = [
-  {
-    name: "GitHub",
-    href: "https://github.com/dansun123",
-    icon: Github,
-    username: "@dansun123",
-    color: "hover:text-gray-900 dark:hover:text-gray-400",
-  },
   {
     name: "LinkedIn",
     href: "https://www.linkedin.com/in/daniel-sun-440493171/",
@@ -34,7 +34,7 @@ const socialLinks = [
     username: "daniel@mathdash.com",
     color: "hover:text-red-600",
   },
-]
+];
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -42,25 +42,27 @@ export default function Contact() {
     email: "",
     subject: "",
     message: "",
-  })
+  });
 
   const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
+    e.preventDefault();
     // Handle form submission
     const mailtoLink = `mailto:daniel@mathdash.com?subject=${encodeURIComponent(
       formData.subject || "Contact from Portfolio"
     )}&body=${encodeURIComponent(
       `From: ${formData.name} (${formData.email})\n\n${formData.message}`
-    )}`
-    window.location.href = mailtoLink
-  }
+    )}`;
+    window.location.href = mailtoLink;
+  };
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setFormData(prev => ({
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    setFormData((prev) => ({
       ...prev,
       [e.target.name]: e.target.value,
-    }))
-  }
+    }));
+  };
 
   return (
     <div className="min-h-screen py-12 px-4 sm:px-6 lg:px-8">
@@ -76,8 +78,8 @@ export default function Contact() {
             Get In <span className="gradient-text">Touch</span>
           </h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            I&apos;m always excited to connect with fellow developers, potential collaborators, 
-            or anyone interested in discussing technology and innovation
+            I&apos;m always excited to connect with parents, teachers, or anyone
+            interested in discussing how to improve math education.
           </p>
         </motion.div>
 
@@ -96,7 +98,10 @@ export default function Contact() {
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
-                    <label htmlFor="name" className="block text-sm font-medium mb-2">
+                    <label
+                      htmlFor="name"
+                      className="block text-sm font-medium mb-2"
+                    >
                       Your Name
                     </label>
                     <input
@@ -111,7 +116,10 @@ export default function Contact() {
                     />
                   </div>
                   <div>
-                    <label htmlFor="email" className="block text-sm font-medium mb-2">
+                    <label
+                      htmlFor="email"
+                      className="block text-sm font-medium mb-2"
+                    >
                       Your Email
                     </label>
                     <input
@@ -127,7 +135,10 @@ export default function Contact() {
                   </div>
                 </div>
                 <div>
-                  <label htmlFor="subject" className="block text-sm font-medium mb-2">
+                  <label
+                    htmlFor="subject"
+                    className="block text-sm font-medium mb-2"
+                  >
                     Subject
                   </label>
                   <input
@@ -137,11 +148,14 @@ export default function Contact() {
                     value={formData.subject}
                     onChange={handleChange}
                     className="w-full px-4 py-2 bg-background border rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
-                    placeholder="Project Collaboration"
+                    placeholder="Seeking guidance on math education"
                   />
                 </div>
                 <div>
-                  <label htmlFor="message" className="block text-sm font-medium mb-2">
+                  <label
+                    htmlFor="message"
+                    className="block text-sm font-medium mb-2"
+                  >
                     Message
                   </label>
                   <textarea
@@ -152,7 +166,7 @@ export default function Contact() {
                     required
                     rows={6}
                     className="w-full px-4 py-2 bg-background border rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-all resize-none"
-                    placeholder="Tell me about your project or just say hi!"
+                    placeholder="Tell me about yourself or just say hi!"
                   />
                 </div>
                 <button
@@ -180,13 +194,8 @@ export default function Contact() {
                 Location
               </h3>
               <p className="text-muted-foreground">
-                Currently based in <span className="font-medium">San Francisco, California</span>
-              </p>
-              <p className="text-sm text-muted-foreground mt-2">
-                Frequently traveling to New York and San Diego
-              </p>
-              <p className="text-sm text-muted-foreground mt-2">
-                Open to remote opportunities worldwide
+                Currently based in{" "}
+                <span className="font-medium">San Francisco, California</span>
               </p>
             </div>
 
@@ -195,7 +204,7 @@ export default function Contact() {
               <h3 className="text-xl font-semibold mb-4">Connect With Me</h3>
               <div className="space-y-4">
                 {socialLinks.map((link, index) => {
-                  const Icon = link.icon
+                  const Icon = link.icon;
                   return (
                     <motion.div
                       key={link.name}
@@ -206,14 +215,20 @@ export default function Contact() {
                       <Link
                         href={link.href}
                         target={link.name !== "Email" ? "_blank" : undefined}
-                        rel={link.name !== "Email" ? "noopener noreferrer" : undefined}
+                        rel={
+                          link.name !== "Email"
+                            ? "noopener noreferrer"
+                            : undefined
+                        }
                         className={`flex items-center justify-between p-3 rounded-lg hover:bg-muted transition-all group ${link.color}`}
                       >
                         <div className="flex items-center">
                           <Icon className="h-5 w-5 mr-3" />
                           <div>
                             <p className="font-medium">{link.name}</p>
-                            <p className="text-sm text-muted-foreground">{link.username}</p>
+                            <p className="text-sm text-muted-foreground">
+                              {link.username}
+                            </p>
                           </div>
                         </div>
                         <span className="text-sm text-muted-foreground group-hover:text-primary transition-colors">
@@ -221,7 +236,7 @@ export default function Contact() {
                         </span>
                       </Link>
                     </motion.div>
-                  )
+                  );
                 })}
               </div>
             </div>
@@ -230,27 +245,19 @@ export default function Contact() {
             <div className="bg-card p-6 rounded-lg border">
               <div className="flex items-center mb-4">
                 <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse mr-3"></div>
-                <h3 className="text-xl font-semibold">Available for Opportunities</h3>
+                <h3 className="text-xl font-semibold">Currently Hiring</h3>
               </div>
               <p className="text-muted-foreground">
-                I&apos;m currently open to:
+                I am looking for people who are passionate about education and
               </p>
               <ul className="mt-3 space-y-2 text-sm text-muted-foreground">
                 <li className="flex items-start">
                   <span className="text-primary mr-2">•</span>
-                  Full-time positions in software engineering
+                  Are good at math
                 </li>
                 <li className="flex items-start">
                   <span className="text-primary mr-2">•</span>
-                  Interesting project collaborations
-                </li>
-                <li className="flex items-start">
-                  <span className="text-primary mr-2">•</span>
-                  Consulting on education technology
-                </li>
-                <li className="flex items-start">
-                  <span className="text-primary mr-2">•</span>
-                  Speaking engagements and mentorship
+                  Can code
                 </li>
               </ul>
             </div>
@@ -269,12 +276,13 @@ export default function Contact() {
               Let&apos;s Build Something Amazing Together
             </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              Whether you have a project in mind, need technical expertise, or just want to chat 
-              about technology and innovation, I&apos;m always happy to connect!
+              Whether you have a project in mind, need some guidance, or just
+              want to chat about technology and innovation, I&apos;m always
+              happy to connect!
             </p>
           </div>
         </motion.div>
       </div>
     </div>
-  )
+  );
 }
