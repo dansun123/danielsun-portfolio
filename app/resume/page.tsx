@@ -13,8 +13,8 @@ const experience = [
     location: "San Francisco, CA",
     dateRange: "January 2024 - Present",
     points: [
-      "Building the best way to learn math - a math training platform that you cannot get stuck on",
-      "90% AIME qualification rate",
+      "Building the best way to learn math",
+      "Personalized explanations for every problem so students can never get stuck",
       "YC W24, backed by Google Ventures",
     ],
   },
