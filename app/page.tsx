@@ -4,14 +4,8 @@ import Link from "next/link";
 import Image from "next/image";
 import {
   ArrowRight,
-  Code,
-  Lightbulb,
-  Rocket,
-  Trophy,
-  Github,
   Linkedin,
   Mail,
-  GraduationCap,
   Brain,
   Users,
   TrendingUp,
@@ -19,13 +13,6 @@ import {
 } from "lucide-react";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
-
-const achievements = [
-  { icon: Rocket, text: "YC W24 Founder" },
-  { icon: GraduationCap, text: "MIT CS & Math '22" },
-  { icon: Code, text: "Ex-Jane Street Trader" },
-  { icon: Trophy, text: "MOPper and USA Math Olympian" },
-];
 
 export default function Home() {
   // Prevent hydration mismatch by ensuring client-only rendering for animations
@@ -535,7 +522,7 @@ export default function Home() {
             className="bg-gradient-to-r from-primary/10 to-primary/5 p-12 rounded-2xl border border-primary/20"
           >
             <h2 className="text-3xl font-heading font-bold mb-4">
-              Enrich Your Student’s Problem-Solving
+              Enrich Your Student&apos;s Problem-Solving
             </h2>
             <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
               Whether you&apos;re interested in MathDash or just want to ask

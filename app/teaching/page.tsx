@@ -7,7 +7,6 @@ import {
   Users,
   Award,
   GraduationCap,
-  Star,
   Calendar,
 } from "lucide-react";
 
@@ -169,7 +168,7 @@ export default function Teaching() {
               {teachingPhilosophy.title}
             </h2>
             <p className="text-lg text-center text-muted-foreground italic max-w-3xl mx-auto">
-              "{teachingPhilosophy.quote}"
+              &quot;{teachingPhilosophy.quote}&quot;
             </p>
           </div>
         </motion.div>
@@ -275,7 +274,7 @@ export default function Teaching() {
             <div className="grid md:grid-cols-2 gap-6">
               <div className="bg-background rounded-lg p-6">
                 <p className="text-muted-foreground italic mb-4">
-                  &quot;MathDash has truly transformed my son's excitement
+                  &quot;MathDash has truly transformed my son&apos;s excitement
                   towards math. The platform you guys have created makes
                   learning enjoyable and engaging.&quot;
                 </p>
