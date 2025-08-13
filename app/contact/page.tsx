@@ -180,7 +180,7 @@ export default function Contact() {
                 Location
               </h3>
               <p className="text-muted-foreground">
-                Currently based in <span className="font-medium">Boston, Massachusetts</span>
+                Currently based in <span className="font-medium">San Francisco, California</span>
               </p>
               <p className="text-sm text-muted-foreground mt-2">
                 Frequently traveling to New York and San Diego

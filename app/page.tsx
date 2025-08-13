@@ -1,6 +1,7 @@
 "use client"
 
 import Link from "next/link"
+import Image from "next/image"
 import { ArrowRight, Code, Lightbulb, Rocket, Trophy } from "lucide-react"
 import { motion } from "framer-motion"
 
@@ -23,6 +24,23 @@ export default function Home() {
             transition={{ duration: 0.5 }}
             className="text-center"
           >
+            {/* Hero Image */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+              className="mb-8 flex justify-center"
+            >
+              <div className="relative w-48 h-48 sm:w-56 sm:h-56 lg:w-64 lg:h-64 rounded-full overflow-hidden border-4 border-primary/20 shadow-2xl">
+                <Image
+                  src="/images/profile-waterfall.jpg"
+                  alt="Daniel Sun"
+                  fill
+                  className="object-cover"
+                  priority
+                />
+              </div>
+            </motion.div>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-heading font-bold mb-6">
               Hi, I&apos;m <span className="gradient-text">Daniel Sun</span>
             </h1>

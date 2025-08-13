@@ -1,9 +1,10 @@
-"use client"
+"use client";
 
-import { motion } from "framer-motion"
-import { Download, Briefcase, GraduationCap, Code2, Award } from "lucide-react"
-import { useState } from "react"
-import { cn } from "@/lib/utils"
+import { motion } from "framer-motion";
+import Image from "next/image";
+import { Download, Briefcase, GraduationCap, Code2, Award } from "lucide-react";
+import { useState } from "react";
+import { cn } from "@/lib/utils";
 
 const experience = [
   {
@@ -12,10 +13,9 @@ const experience = [
     location: "San Francisco, CA",
     dateRange: "January 2024 - Present",
     points: [
+      "Building the best way to learn math - a math training platform that you cannot get stuck on",
       "Raised $2m from Google Ventures and others to build the future of math education",
       "Part of YCombinator Winter 2024 batch",
-      "Personalized automated coaching platform for competition math",
-      "90% AIME Qualification amongst students using the platform"
     ],
   },
   {
@@ -26,7 +26,7 @@ const experience = [
     points: [
       "Built models and traded on the options desk",
       "Wrote code to improve efficiency of trading systems",
-      "Led internship activities and coached mock trading to teach quantitative finance"
+      "Led internship activities and coached mock trading to teach quantitative finance",
     ],
   },
   {
@@ -36,15 +36,15 @@ const experience = [
     dateRange: "June 2021 - August 2022",
     points: [
       "Built liquidity-provision system to trade over $100k each day while managing risk",
-      "Ran promotions, growing the user base from 0 to over 10,000"
+      "Ran promotions, growing the user base from 0 to over 10,000",
     ],
   },
-]
+];
 
 const education = [
   {
     school: "Massachusetts Institute of Technology",
-    degree: "Bachelor of Science in Computer Science and Mathematics",
+    degree: "Bachelor's Degree of Science in Computer Science and Mathematics",
     location: "Cambridge, MA",
     year: "September 2018 - June 2022",
     gpa: null,
@@ -65,7 +65,7 @@ const education = [
     gpa: "4.0/4.0 Unweighted, 4.8 Weighted, ACT: 36/36",
     coursework: [],
   },
-]
+];
 
 const skillCategories = [
   {
@@ -75,7 +75,14 @@ const skillCategories = [
   },
   {
     name: "Web Development",
-    skills: ["React", "NodeJS", "TypeScript", "Next.js", "HTML/CSS", "REST APIs"],
+    skills: [
+      "React",
+      "NodeJS",
+      "TypeScript",
+      "Next.js",
+      "HTML/CSS",
+      "REST APIs",
+    ],
     color: "text-green-600",
   },
   {
@@ -85,13 +92,19 @@ const skillCategories = [
   },
   {
     name: "Interests",
-    skills: ["Education", "Building Webapp Games", "American Ninja Warrior", "Poker", "Basketball"],
+    skills: [
+      "Education",
+      "Building Webapp Games",
+      "American Ninja Warrior",
+      "Poker",
+      "Basketball",
+    ],
     color: "text-purple-600",
   },
-]
+];
 
 export default function Resume() {
-  const [activeTab, setActiveTab] = useState("experience")
+  const [activeTab, setActiveTab] = useState("experience");
 
   return (
     <div className="min-h-screen py-12 px-4 sm:px-6 lg:px-8">
@@ -103,11 +116,28 @@ export default function Resume() {
           transition={{ duration: 0.5 }}
           className="text-center mb-12"
         >
+          {/* Professional Photo */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.5, delay: 0.1 }}
+            className="mb-6 flex justify-center"
+          >
+            <div className="relative w-32 h-32 rounded-full overflow-hidden border-4 border-primary/20 shadow-xl">
+              <Image
+                src="/images/profile-professional.jpg"
+                alt="Daniel Sun - Professional"
+                fill
+                className="object-cover object-top"
+              />
+            </div>
+          </motion.div>
           <h1 className="text-4xl sm:text-5xl font-heading font-bold mb-4">
             My <span className="gradient-text">Resume</span>
           </h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-6">
-            MIT Computer Science graduate with experience in quantitative trading and full-stack development
+            MIT Computer Science graduate with experience in quantitative
+            trading and full-stack development
           </p>
           <button className="inline-flex items-center px-6 py-3 bg-primary text-primary-foreground rounded-lg font-medium hover-lift">
             <Download className="mr-2 h-5 w-5" />
@@ -164,8 +194,12 @@ export default function Resume() {
                         <Briefcase className="h-5 w-5 mr-2 text-primary" />
                         {job.position}
                       </h3>
-                      <p className="text-lg text-muted-foreground">{job.company}</p>
-                      <p className="text-sm text-muted-foreground">{job.location}</p>
+                      <p className="text-lg text-muted-foreground">
+                        {job.company}
+                      </p>
+                      <p className="text-sm text-muted-foreground">
+                        {job.location}
+                      </p>
                     </div>
                     <span className="text-sm font-medium text-primary bg-primary/10 px-3 py-1 rounded">
                       {job.dateRange}
@@ -201,8 +235,12 @@ export default function Resume() {
                         <GraduationCap className="h-5 w-5 mr-2 text-primary" />
                         {edu.school}
                       </h3>
-                      <p className="text-lg text-muted-foreground">{edu.degree}</p>
-                      <p className="text-sm text-muted-foreground">{edu.location}</p>
+                      <p className="text-lg text-muted-foreground">
+                        {edu.degree}
+                      </p>
+                      <p className="text-sm text-muted-foreground">
+                        {edu.location}
+                      </p>
                     </div>
                     <span className="text-sm font-medium text-primary bg-primary/10 px-3 py-1 rounded">
                       {edu.year}
@@ -241,31 +279,36 @@ export default function Resume() {
                   <li className="flex items-start">
                     <span className="text-primary mr-2">•</span>
                     <span className="text-muted-foreground">
-                      USA Math Olympiad Summer Program - Top 50 USA Math Olympiad scorers nationwide (2016)
+                      USA Math Olympiad Summer Program - Top 50 USA Math
+                      Olympiad scorers nationwide (2016)
                     </span>
                   </li>
                   <li className="flex items-start">
                     <span className="text-primary mr-2">•</span>
                     <span className="text-muted-foreground">
-                      3x USA Math Olympiad Qualifier - Top 250 USA Math students nationwide (2016-18)
+                      3x USA Math Olympiad Qualifier - Top 250 USA Math students
+                      nationwide (2016-18)
                     </span>
                   </li>
                   <li className="flex items-start">
                     <span className="text-primary mr-2">•</span>
                     <span className="text-muted-foreground">
-                      3x USA Physics Olympiad - Top 100 USA Physics Olympiad Scorers nationwide (2016-18)
+                      3x USA Physics Olympiad - Top 100 USA Physics Olympiad
+                      Scorers nationwide (2016-18)
                     </span>
                   </li>
                   <li className="flex items-start">
                     <span className="text-primary mr-2">•</span>
                     <span className="text-muted-foreground">
-                      Regeneron Science and Talent Search - Top 300 research projects nationwide (2018)
+                      Regeneron Science and Talent Search - Top 300 research
+                      projects nationwide (2018)
                     </span>
                   </li>
                   <li className="flex items-start">
                     <span className="text-primary mr-2">•</span>
                     <span className="text-muted-foreground">
-                      American Ninja Warrior Contestant - Top 400 out of &gt; 100,000 applicants (2021-22)
+                      American Ninja Warrior Contestant - Top 400 out of &gt;
+                      100,000 applicants (2021-22)
                     </span>
                   </li>
                 </ul>
@@ -284,20 +327,42 @@ export default function Resume() {
                 </h3>
                 <div className="space-y-4">
                   <div>
-                    <h4 className="font-semibold">MIT Web.Lab - Co-President & Academic Chair</h4>
-                    <p className="text-sm text-muted-foreground">Cambridge, MA | Sep 2020 - Jan 2022</p>
+                    <h4 className="font-semibold">
+                      MIT Web.Lab - Co-President & Academic Chair
+                    </h4>
+                    <p className="text-sm text-muted-foreground">
+                      Cambridge, MA | Sep 2020 - Jan 2022
+                    </p>
                     <ul className="mt-2 space-y-1 text-sm text-muted-foreground">
-                      <li>• Developed curriculum for MIT&apos;s annual website development class, covering the MERN stack</li>
-                      <li>• Instructed over 400 students January 2022 (in-person), 500 students in January 2021 (remote)</li>
+                      <li>
+                        • Developed curriculum for MIT&apos;s annual website
+                        development class, covering the MERN stack
+                      </li>
+                      <li>
+                        • Instructed over 400 students January 2022 (in-person),
+                        500 students in January 2021 (remote)
+                      </li>
                     </ul>
                   </div>
                   <div>
-                    <h4 className="font-semibold">MIT Poker Club - Co-President & Events Director</h4>
-                    <p className="text-sm text-muted-foreground">Cambridge, MA | Sep 2018 - Present</p>
+                    <h4 className="font-semibold">
+                      MIT Poker Club - Co-President & Events Director
+                    </h4>
+                    <p className="text-sm text-muted-foreground">
+                      Cambridge, MA | Sep 2018 - Present
+                    </p>
                     <ul className="mt-2 space-y-1 text-sm text-muted-foreground">
-                      <li>• Taught 15.S50, the Sloan Poker Theory course over IAP</li>
-                      <li>• Restructured internal meetings to greatly improve efficiency of club</li>
-                      <li>• Founded education initiative for hundreds of MIT students</li>
+                      <li>
+                        • Taught 15.S50, the Sloan Poker Theory course over IAP
+                      </li>
+                      <li>
+                        • Restructured internal meetings to greatly improve
+                        efficiency of club
+                      </li>
+                      <li>
+                        • Founded education initiative for hundreds of MIT
+                        students
+                      </li>
                     </ul>
                   </div>
                 </div>
@@ -340,7 +405,9 @@ export default function Resume() {
                 transition={{ duration: 0.3, delay: 0.5 }}
                 className="md:col-span-2 bg-card p-6 rounded-lg border"
               >
-                <h3 className="text-lg font-semibold mb-4">Other Skills & Interests</h3>
+                <h3 className="text-lg font-semibold mb-4">
+                  Other Skills & Interests
+                </h3>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                   <div>
                     <p className="font-medium mb-2">Soft Skills</p>
@@ -373,5 +440,5 @@ export default function Resume() {
         </motion.div>
       </div>
     </div>
-  )
+  );
 }

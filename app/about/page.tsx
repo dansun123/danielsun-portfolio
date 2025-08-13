@@ -1,6 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion"
+import Image from "next/image"
 import { Calendar, MapPin, Book, Award, Gamepad2, Mountain } from "lucide-react"
 
 const timeline = [
@@ -90,13 +91,25 @@ export default function About() {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="space-y-6"
           >
+            {/* Profile Image */}
+            <div className="bg-card p-4 rounded-lg border overflow-hidden">
+              <div className="relative w-full h-64 rounded-lg overflow-hidden">
+                <Image
+                  src="/images/profile-professional.jpg"
+                  alt="Daniel Sun - Professional"
+                  fill
+                  className="object-cover object-top"
+                />
+              </div>
+            </div>
+
             <div className="bg-card p-6 rounded-lg border">
               <h3 className="text-xl font-semibold mb-4 flex items-center">
                 <MapPin className="h-5 w-5 mr-2 text-primary" />
                 Location
               </h3>
               <p className="text-muted-foreground">
-                Based in Boston, MA<br />
+                Based in San Francisco, CA<br />
                 Frequently in NYC & San Diego
               </p>
             </div>
@@ -163,6 +176,125 @@ export default function About() {
                 </motion.div>
               )
             })}
+          </div>
+        </motion.div>
+
+        {/* Photo Gallery */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.4 }}
+          className="mb-16"
+        >
+          <h2 className="text-3xl font-heading font-bold mb-8 text-center">Life in Pictures</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            {/* YC Event */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.3, delay: 0.5 }}
+              className="relative h-64 rounded-lg overflow-hidden group"
+            >
+              <Image
+                src="/images/YC_event.jpg"
+                alt="Y Combinator W24"
+                fill
+                className="object-cover group-hover:scale-105 transition-transform duration-300"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
+                <p className="absolute bottom-4 left-4 text-white font-semibold">Y Combinator W24</p>
+              </div>
+            </motion.div>
+
+            {/* Ninja Warrior */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.3, delay: 0.6 }}
+              className="relative h-64 rounded-lg overflow-hidden group"
+            >
+              <Image
+                src="/images/ninja_action_shot.jpg"
+                alt="American Ninja Warrior"
+                fill
+                className="object-cover group-hover:scale-105 transition-transform duration-300"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
+                <p className="absolute bottom-4 left-4 text-white font-semibold">American Ninja Warrior</p>
+              </div>
+            </motion.div>
+
+            {/* Poker Club */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.3, delay: 0.7 }}
+              className="relative h-64 rounded-lg overflow-hidden group"
+            >
+              <Image
+                src="/images/poker_club.jpg"
+                alt="MIT Poker Club"
+                fill
+                className="object-cover group-hover:scale-105 transition-transform duration-300"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
+                <p className="absolute bottom-4 left-4 text-white font-semibold">MIT Poker Club</p>
+              </div>
+            </motion.div>
+
+            {/* Cello Performance */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.3, delay: 0.8 }}
+              className="relative h-64 rounded-lg overflow-hidden group"
+            >
+              <Image
+                src="/images/cello.jpg"
+                alt="Orchestra Performance"
+                fill
+                className="object-cover group-hover:scale-105 transition-transform duration-300"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
+                <p className="absolute bottom-4 left-4 text-white font-semibold">Orchestra Performance</p>
+              </div>
+            </motion.div>
+
+            {/* Waterfall Photo */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.3, delay: 0.9 }}
+              className="relative h-64 rounded-lg overflow-hidden group"
+            >
+              <Image
+                src="/images/profile-waterfall.jpg"
+                alt="Exploring Nature"
+                fill
+                className="object-cover group-hover:scale-105 transition-transform duration-300"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
+                <p className="absolute bottom-4 left-4 text-white font-semibold">Exploring Nature</p>
+              </div>
+            </motion.div>
+
+            {/* Ninja Start */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.3, delay: 1.0 }}
+              className="relative h-64 rounded-lg overflow-hidden group"
+            >
+              <Image
+                src="/images/ninja_start.jpg"
+                alt="Ready to Compete"
+                fill
+                className="object-cover group-hover:scale-105 transition-transform duration-300"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
+                <p className="absolute bottom-4 left-4 text-white font-semibold">Ready to Compete</p>
+              </div>
+            </motion.div>
           </div>
         </motion.div>
 

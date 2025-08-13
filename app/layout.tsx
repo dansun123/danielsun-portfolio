@@ -15,6 +15,10 @@ export const metadata: Metadata = {
     siteName: "Daniel Sun Portfolio",
     type: "website",
   },
+  icons: {
+    icon: "/favicon.svg",
+    apple: "/favicon.svg",
+  },
 };
 
 export default function RootLayout({

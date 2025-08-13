@@ -2,6 +2,7 @@
 
 import { useState } from "react"
 import { motion } from "framer-motion"
+import Image from "next/image"
 import { ExternalLink, Github, Calendar, Code } from "lucide-react"
 import Link from "next/link"
 import { cn } from "@/lib/utils"
@@ -17,6 +18,7 @@ const projects = [
     technologies: ["React", "Node.js", "MongoDB", "Express"],
     category: "Education",
     featured: true,
+    image: "/images/projects/interstellar.png",
   },
   {
     title: "QuickMaths",
@@ -28,6 +30,7 @@ const projects = [
     technologies: ["React", "JavaScript", "CSS", "Game Design"],
     category: "Education",
     featured: true,
+    image: "/images/projects/quickmaths.png",
   },
   {
     title: "Partyy",
@@ -39,6 +42,7 @@ const projects = [
     technologies: ["React", "Spotify API", "Node.js"],
     category: "Entertainment",
     featured: false,
+    image: "/images/projects/partyy.png",
   },
   {
     title: "DJZoomer",
@@ -50,6 +54,7 @@ const projects = [
     technologies: ["React", "Lyrics API", "Heroku"],
     category: "Entertainment",
     featured: false,
+    image: "/images/projects/djzoomer.png",
   },
   {
     title: "CardBox",
@@ -61,6 +66,7 @@ const projects = [
     technologies: ["React", "WebSocket", "Game Engine", "Custom DSL"],
     category: "Gaming",
     featured: true,
+    image: "/images/projects/cardbox.png",
   },
 ]
 
@@ -127,10 +133,21 @@ export default function Projects() {
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.3, delay: index * 0.1 }}
               className={cn(
-                "bg-card rounded-lg border overflow-hidden hover-lift",
+                "bg-card rounded-lg border overflow-hidden hover-lift group",
                 project.featured && "md:col-span-2 lg:col-span-1"
               )}
             >
+              {/* Project Image */}
+              {project.image && (
+                <div className="relative h-48 w-full overflow-hidden bg-muted">
+                  <Image
+                    src={project.image}
+                    alt={project.title}
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+              )}
               <div className="p-6">
                 {project.featured && (
                   <span className="inline-block px-2 py-1 bg-primary/10 text-primary text-xs font-semibold rounded mb-3">
