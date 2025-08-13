@@ -14,8 +14,8 @@ const experience = [
     dateRange: "January 2024 - Present",
     points: [
       "Building the best way to learn math - a math training platform that you cannot get stuck on",
-      "Raised $2m from Google Ventures and others to build the future of math education",
-      "Part of YCombinator Winter 2024 batch",
+      "90% AIME qualification rate",
+      "YC W24, backed by Google Ventures",
     ],
   },
   {
