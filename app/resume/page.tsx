@@ -410,9 +410,12 @@ export default function Resume() {
                       </div>
                       <div>
                         <h3 className="font-semibold mb-1">MathDash</h3>
-                        <p className="text-sm text-muted-foreground mb-2">Co-founder & CEO</p>
+                        <p className="text-sm text-muted-foreground mb-2">
+                          Co-founder & CEO
+                        </p>
                         <p className="text-xs text-muted-foreground">
-                          Building personalized AI-powered math education platform • YC W24 • Google Ventures backed
+                          Building personalized AI-powered math education
+                          platform • YC W24 • Google Ventures backed
                         </p>
                       </div>
                     </div>
@@ -430,9 +433,12 @@ export default function Resume() {
                       </div>
                       <div>
                         <h3 className="font-semibold mb-1">Jane Street</h3>
-                        <p className="text-sm text-muted-foreground mb-2">Quantitative Trader</p>
+                        <p className="text-sm text-muted-foreground mb-2">
+                          Quantitative Trader
+                        </p>
                         <p className="text-xs text-muted-foreground">
-                          Options desk trading • Built models & trading systems • Coached mock trading
+                          Options desk trading • Built models & trading systems
+                          • Coached mock trading
                         </p>
                       </div>
                     </div>
@@ -450,9 +456,12 @@ export default function Resume() {
                       </div>
                       <div>
                         <h3 className="font-semibold mb-1">Kalshi</h3>
-                        <p className="text-sm text-muted-foreground mb-2">Trader & Head of Engineering</p>
+                        <p className="text-sm text-muted-foreground mb-2">
+                          Trader & Head of Engineering
+                        </p>
                         <p className="text-xs text-muted-foreground">
-                          Built $100k+/day trading system • Grew userbase from 0 to 10,000+
+                          Built $100k+/day trading system • Grew userbase from 0
+                          to 10,000+
                         </p>
                       </div>
                     </div>
@@ -477,13 +486,18 @@ export default function Resume() {
                       <div className="p-2 rounded-lg bg-primary/10 group-hover:bg-primary/20 transition-colors">
                         <Target className="h-5 w-5 text-primary" />
                       </div>
-                      <h3 className="font-semibold text-sm">American Ninja Warrior</h3>
+                      <h3 className="font-semibold text-sm">
+                        American Ninja Warrior
+                      </h3>
                     </div>
                     <p className="text-xs text-muted-foreground">
-                      Selected as contestant from 100,000+ applicants • Competed on national television showcasing athletic prowess
+                      Selected as contestant from 100,000+ applicants • Competed
+                      on national television
                     </p>
                     <div className="mt-2">
-                      <span className="text-xs bg-red-500/10 text-red-600 px-2 py-0.5 rounded">Athletics</span>
+                      <span className="text-xs bg-red-500/10 text-red-600 px-2 py-0.5 rounded">
+                        Athletics
+                      </span>
                       <span className="text-xs text-primary ml-2">2021-22</span>
                     </div>
                   </motion.div>
@@ -498,13 +512,18 @@ export default function Resume() {
                       <div className="p-2 rounded-lg bg-primary/10 group-hover:bg-primary/20 transition-colors">
                         <Fish className="h-5 w-5 text-primary" />
                       </div>
-                      <h3 className="font-semibold text-sm">MOP Fish Champion</h3>
+                      <h3 className="font-semibold text-sm">
+                        MOP Fish Champion
+                      </h3>
                     </div>
                     <p className="text-xs text-muted-foreground">
-                      Won the legendary card game tournament at Math Olympiad Summer Program • Beat 50+ top math minds
+                      Won the legendary card game tournament at Math Olympiad
+                      Summer Program • Beat 50+ top math minds
                     </p>
                     <div className="mt-2">
-                      <span className="text-xs bg-blue-500/10 text-blue-600 px-2 py-0.5 rounded">Strategy Games</span>
+                      <span className="text-xs bg-blue-500/10 text-blue-600 px-2 py-0.5 rounded">
+                        Strategy Games
+                      </span>
                       <span className="text-xs text-primary ml-2">2016</span>
                     </div>
                   </motion.div>
@@ -519,13 +538,18 @@ export default function Resume() {
                       <div className="p-2 rounded-lg bg-primary/10 group-hover:bg-primary/20 transition-colors">
                         <DollarSign className="h-5 w-5 text-primary" />
                       </div>
-                      <h3 className="font-semibold text-sm">Figgie Tournament Winner</h3>
+                      <h3 className="font-semibold text-sm">
+                        Figgie Tournament Winner
+                      </h3>
                     </div>
                     <p className="text-xs text-muted-foreground">
-                      Triumphed at Jane Street&apos;s game theory competition • Demonstrated exceptional trading & probability skills
+                      Winner of Jane Street&apos;s trading competition • 1000+
+                      participants
                     </p>
                     <div className="mt-2">
-                      <span className="text-xs bg-green-500/10 text-green-600 px-2 py-0.5 rounded">Trading Games</span>
+                      <span className="text-xs bg-green-500/10 text-green-600 px-2 py-0.5 rounded">
+                        Trading Games
+                      </span>
                       <span className="text-xs text-primary ml-2">2023</span>
                     </div>
                   </motion.div>
