@@ -3,13 +3,9 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import {
-  Calendar,
-  MapPin,
   Book,
   Award,
   Gamepad2,
-  Mountain,
-  Mail,
   Volleyball,
   Gamepad,
   Lightbulb,
