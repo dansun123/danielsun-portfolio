@@ -59,9 +59,9 @@ export default function About() {
               <h2 className="text-2xl font-heading font-semibold mb-4">My Story</h2>
               <div className="prose prose-lg text-muted-foreground space-y-4">
                 <p>
-                  I&apos;m an MIT undergraduate who graduated in 2022 with a degree in 6-3 Computer Science 
-                  and Engineering. My path to tech wasn&apos;t traditional - I discovered my passion for 
-                  building things quite late, starting web development only in 2020.
+                  I&apos;m the Co-founder & CEO of MathDash (YC W24), where we&apos;re building the future of 
+                  math education with personalized AI coaching. I graduated from MIT in 2022 with degrees 
+                  in Computer Science and Mathematics.
                 </p>
                 <p>
                   Since then, I&apos;ve created projects like Interstellar, DJZoomer, Partyy, and QuickMaths. 
@@ -69,14 +69,14 @@ export default function About() {
                   with users, selling enterprise products, and developing production-ready databases.
                 </p>
                 <p>
-                  My professional experience includes working as a Quantitative Trading Intern at 
-                  Akuna Capital where I studied options market making strategies and developed features 
-                  for trading models. I&apos;ve also conducted research at MIT Quest for Intelligence on 
-                  clean energy optimization.
+                  My professional experience includes trading at Jane Street Capital where I built models 
+                  and traded on the options desk, and leading engineering at Kalshi Trading where I built 
+                  systems trading over $100k daily. I&apos;ve raised $2M from Google Ventures and other investors 
+                  for MathDash, achieving 90% AIME qualification rates among our students.
                 </p>
                 <p>
                   I&apos;m particularly interested in projects with social impact, education, and games. 
-                  Currently based in Boston, I frequently travel to New York and San Diego, and I&apos;m 
+                  Currently based in San Francisco with MathDash, I frequently travel to New York and San Diego, and I&apos;m 
                   always open to exploring interesting projects and collaborations.
                 </p>
               </div>

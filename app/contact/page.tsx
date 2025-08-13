@@ -29,9 +29,9 @@ const socialLinks = [
   },
   {
     name: "Email",
-    href: "mailto:sundanield@gmail.com",
+    href: "mailto:daniel@mathdash.com",
     icon: Mail,
-    username: "sundanield@gmail.com",
+    username: "daniel@mathdash.com",
     color: "hover:text-red-600",
   },
 ]
@@ -47,7 +47,7 @@ export default function Contact() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
     // Handle form submission
-    const mailtoLink = `mailto:sundanield@gmail.com?subject=${encodeURIComponent(
+    const mailtoLink = `mailto:daniel@mathdash.com?subject=${encodeURIComponent(
       formData.subject || "Contact from Portfolio"
     )}&body=${encodeURIComponent(
       `From: ${formData.name} (${formData.email})\n\n${formData.message}`

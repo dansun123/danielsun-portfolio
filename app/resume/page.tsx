@@ -7,36 +7,36 @@ import { cn } from "@/lib/utils"
 
 const experience = [
   {
-    company: "MIT Quest for Intelligence",
-    position: "Undergraduate Researcher",
-    location: "Cambridge, MA",
-    dateRange: "November 2019 - 2022",
+    company: "MathDash",
+    position: "Co-founder & CEO",
+    location: "San Francisco, CA",
+    dateRange: "January 2024 - Present",
     points: [
-      "Working on predicting MOER indexes for clean energy use at MIT",
-      "Developed machine learning models for energy optimization",
-      "Collaborated with interdisciplinary team on sustainability initiatives"
+      "Raised $2m from Google Ventures and others to build the future of math education",
+      "Part of YCombinator Winter 2024 batch",
+      "Personalized automated coaching platform for competition math",
+      "90% AIME Qualification amongst students using the platform"
     ],
   },
   {
-    company: "Akuna Capital",
-    position: "Quantitative Trading Intern",
-    location: "Chicago, IL",
-    dateRange: "June 2019 - August 2019",
-    points: [
-      "Studied options market making strategies in the Akuna education program",
-      "Developed key features for D1 trading model",
-      "Implemented algorithms to improve trading efficiency"
-    ],
-  },
-  {
-    company: "Credit Suisse",
-    position: "Equity Derivatives Software Development Intern",
+    company: "Jane Street Capital",
+    position: "Quantitative Trader",
     location: "New York, NY",
-    dateRange: "January 2019 - February 2019",
+    dateRange: "September 2022 - December 2023",
     points: [
-      "Used NLP to develop chatbot parser for brokers to quote instruments",
-      "Improved workflow automation for equity derivatives trading desk",
-      "Collaborated with traders to understand business requirements"
+      "Built models and traded on the options desk",
+      "Wrote code to improve efficiency of trading systems",
+      "Led internship activities and coached mock trading to teach quantitative finance"
+    ],
+  },
+  {
+    company: "Kalshi Trading",
+    position: "Trader and Head of Engineering",
+    location: "New York, NY",
+    dateRange: "June 2021 - August 2022",
+    points: [
+      "Built liquidity-provision system to trade over $100k each day while managing risk",
+      "Ran promotions, growing the user base from 0 to over 10,000"
     ],
   },
 ]
@@ -44,24 +44,25 @@ const experience = [
 const education = [
   {
     school: "Massachusetts Institute of Technology",
-    degree: "Bachelor of Science in Computer Science and Engineering (6-3)",
+    degree: "Bachelor of Science in Computer Science and Mathematics",
     location: "Cambridge, MA",
-    year: "2018 - 2022",
+    year: "September 2018 - June 2022",
     gpa: null,
     coursework: [
-      "Machine Learning",
-      "Inference and Information",
-      "Algorithms",
-      "Computer Systems",
-      "Artificial Intelligence",
+      "6.867 Graduate Machine Learning",
+      "6.437 Graduate Inference and Information",
+      "6.046 Design and Analysis of Algorithms",
+      "6.031 Elements of Software Construction",
+      "6.033 Computer Systems Engineering",
+      "18.404 Theory of Computation",
     ],
   },
   {
     school: "Canyon Crest Academy",
     degree: "High School Diploma",
     location: "San Diego, CA",
-    year: "2014 - 2018",
-    gpa: null,
+    year: "August 2014 - June 2018",
+    gpa: "4.0/4.0 Unweighted, 4.8 Weighted, ACT: 36/36",
     coursework: [],
   },
 ]
@@ -69,28 +70,23 @@ const education = [
 const skillCategories = [
   {
     name: "Languages",
-    skills: ["Python", "JavaScript", "TypeScript", "Java", "C++", "SQL"],
+    skills: ["Python", "Java", "React", "TypeScript", "SQL", "C++", "OCaml"],
     color: "text-blue-600",
   },
   {
     name: "Web Development",
-    skills: ["React", "Node.js", "Express", "Next.js", "HTML/CSS", "REST APIs"],
+    skills: ["React", "NodeJS", "TypeScript", "Next.js", "HTML/CSS", "REST APIs"],
     color: "text-green-600",
   },
   {
-    name: "Data Science & ML",
-    skills: ["NumPy", "Pandas", "Scikit-learn", "TensorFlow", "Keras", "Jupyter"],
-    color: "text-purple-600",
-  },
-  {
-    name: "Databases",
-    skills: ["MongoDB", "PostgreSQL", "Redis", "SQLite", "ElasticSearch"],
-    color: "text-orange-600",
-  },
-  {
     name: "Tools & Platforms",
-    skills: ["Git", "Docker", "AWS", "Heroku", "Linux", "Agile/Scrum"],
+    skills: ["Git", "LaTeX", "Growth", "Docker", "AWS", "Linux"],
     color: "text-red-600",
+  },
+  {
+    name: "Interests",
+    skills: ["Education", "Building Webapp Games", "American Ninja Warrior", "Poker", "Basketball"],
+    color: "text-purple-600",
   },
 ]
 
@@ -245,28 +241,66 @@ export default function Resume() {
                   <li className="flex items-start">
                     <span className="text-primary mr-2">•</span>
                     <span className="text-muted-foreground">
-                      Math Olympiad Program (MOP) Qualifier - Top math students nationally
+                      USA Math Olympiad Summer Program - Top 50 USA Math Olympiad scorers nationwide (2016)
                     </span>
                   </li>
                   <li className="flex items-start">
                     <span className="text-primary mr-2">•</span>
                     <span className="text-muted-foreground">
-                      Qualified for USA Math, Physics, Chemistry, and Biology Olympiads
+                      3x USA Math Olympiad Qualifier - Top 250 USA Math students nationwide (2016-18)
                     </span>
                   </li>
                   <li className="flex items-start">
                     <span className="text-primary mr-2">•</span>
                     <span className="text-muted-foreground">
-                      First Place - Statewide Chess Tournament (2010)
+                      3x USA Physics Olympiad - Top 100 USA Physics Olympiad Scorers nationwide (2016-18)
                     </span>
                   </li>
                   <li className="flex items-start">
                     <span className="text-primary mr-2">•</span>
                     <span className="text-muted-foreground">
-                      MOP Fish Tournament Winner - Card game championship
+                      Regeneron Science and Talent Search - Top 300 research projects nationwide (2018)
+                    </span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-primary mr-2">•</span>
+                    <span className="text-muted-foreground">
+                      American Ninja Warrior Contestant - Top 400 out of &gt; 100,000 applicants (2021-22)
                     </span>
                   </li>
                 </ul>
+              </motion.div>
+
+              {/* Leadership Section */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.3, delay: 0.4 }}
+                className="bg-card p-6 rounded-lg border"
+              >
+                <h3 className="text-xl font-semibold flex items-center mb-4">
+                  <Award className="h-5 w-5 mr-2 text-primary" />
+                  Leadership Experience
+                </h3>
+                <div className="space-y-4">
+                  <div>
+                    <h4 className="font-semibold">MIT Web.Lab - Co-President & Academic Chair</h4>
+                    <p className="text-sm text-muted-foreground">Cambridge, MA | Sep 2020 - Jan 2022</p>
+                    <ul className="mt-2 space-y-1 text-sm text-muted-foreground">
+                      <li>• Developed curriculum for MIT&apos;s annual website development class, covering the MERN stack</li>
+                      <li>• Instructed over 400 students January 2022 (in-person), 500 students in January 2021 (remote)</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold">MIT Poker Club - Co-President & Events Director</h4>
+                    <p className="text-sm text-muted-foreground">Cambridge, MA | Sep 2018 - Present</p>
+                    <ul className="mt-2 space-y-1 text-sm text-muted-foreground">
+                      <li>• Taught 15.S50, the Sloan Poker Theory course over IAP</li>
+                      <li>• Restructured internal meetings to greatly improve efficiency of club</li>
+                      <li>• Founded education initiative for hundreds of MIT students</li>
+                    </ul>
+                  </div>
+                </div>
               </motion.div>
             </div>
           )}

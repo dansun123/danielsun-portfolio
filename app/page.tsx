@@ -5,10 +5,10 @@ import { ArrowRight, Code, Lightbulb, Rocket, Trophy } from "lucide-react"
 import { motion } from "framer-motion"
 
 const achievements = [
-  { icon: Trophy, text: "MIT CS Graduate '22" },
-  { icon: Code, text: "Full-Stack Developer" },
-  { icon: Lightbulb, text: "4+ Projects Launched" },
-  { icon: Rocket, text: "Math Olympiad Qualifier" },
+  { icon: Rocket, text: "YC W24 Founder" },
+  { icon: Trophy, text: "MIT CS & Math '22" },
+  { icon: Code, text: "Ex-Jane Street Trader" },
+  { icon: Lightbulb, text: "USA Math Olympiad" },
 ]
 
 export default function Home() {
@@ -27,8 +27,7 @@ export default function Home() {
               Hi, I&apos;m <span className="gradient-text">Daniel Sun</span>
             </h1>
             <p className="text-xl sm:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto">
-              MIT Computer Science graduate passionate about building impactful projects
-              and solving interesting problems
+              Co-founder & CEO of MathDash | YC W24 | Building the future of math education
             </p>
             <div className="flex flex-wrap gap-4 justify-center mb-12">
               <Link
