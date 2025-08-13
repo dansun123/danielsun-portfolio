@@ -87,7 +87,7 @@ export default function Projects() {
             My <span className="gradient-text">Projects</span>
           </h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            A collection of projects I've built to solve real problems and explore new technologies
+            A collection of projects I&apos;ve built to solve real problems and explore new technologies
           </p>
         </motion.div>
 
@@ -201,7 +201,7 @@ export default function Projects() {
               Interested in collaborating?
             </h2>
             <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
-              I'm always excited to work on interesting projects, especially those 
+              I&apos;m always excited to work on interesting projects, especially those 
               focused on social impact, education, and innovative technology solutions.
             </p>
             <Link
@@ -209,7 +209,7 @@ export default function Projects() {
               className="inline-flex items-center px-6 py-3 bg-primary text-primary-foreground rounded-lg font-medium hover-lift"
             >
               <Code className="mr-2 h-5 w-5" />
-              Let's Build Something Together
+              Let&apos;s Build Something Together
             </Link>
           </div>
         </motion.div>

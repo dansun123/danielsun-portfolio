@@ -76,7 +76,7 @@ export default function Contact() {
             Get In <span className="gradient-text">Touch</span>
           </h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            I'm always excited to connect with fellow developers, potential collaborators, 
+            I&apos;m always excited to connect with fellow developers, potential collaborators, 
             or anyone interested in discussing technology and innovation
           </p>
         </motion.div>
@@ -233,7 +233,7 @@ export default function Contact() {
                 <h3 className="text-xl font-semibold">Available for Opportunities</h3>
               </div>
               <p className="text-muted-foreground">
-                I'm currently open to:
+                I&apos;m currently open to:
               </p>
               <ul className="mt-3 space-y-2 text-sm text-muted-foreground">
                 <li className="flex items-start">
@@ -266,11 +266,11 @@ export default function Contact() {
         >
           <div className="bg-gradient-to-r from-primary/10 to-primary/5 p-8 rounded-lg border border-primary/20">
             <h2 className="text-2xl font-heading font-semibold mb-4">
-              Let's Build Something Amazing Together
+              Let&apos;s Build Something Amazing Together
             </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
               Whether you have a project in mind, need technical expertise, or just want to chat 
-              about technology and innovation, I'm always happy to connect!
+              about technology and innovation, I&apos;m always happy to connect!
             </p>
           </div>
         </motion.div>

@@ -42,7 +42,7 @@ export default function About() {
             About <span className="gradient-text">Me</span>
           </h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            From gaming enthusiast to MIT graduate, here's my journey into tech and beyond
+            From gaming enthusiast to MIT graduate, here&apos;s my journey into tech and beyond
           </p>
         </motion.div>
 
@@ -59,24 +59,24 @@ export default function About() {
               <h2 className="text-2xl font-heading font-semibold mb-4">My Story</h2>
               <div className="prose prose-lg text-muted-foreground space-y-4">
                 <p>
-                  I'm an MIT undergraduate who graduated in 2022 with a degree in 6-3 Computer Science 
-                  and Engineering. My path to tech wasn't traditional - I discovered my passion for 
+                  I&apos;m an MIT undergraduate who graduated in 2022 with a degree in 6-3 Computer Science 
+                  and Engineering. My path to tech wasn&apos;t traditional - I discovered my passion for 
                   building things quite late, starting web development only in 2020.
                 </p>
                 <p>
-                  Since then, I've created projects like Interstellar, DJZoomer, Partyy, and QuickMaths. 
+                  Since then, I&apos;ve created projects like Interstellar, DJZoomer, Partyy, and QuickMaths. 
                   Each project taught me invaluable lessons about managing teams, building relationships 
                   with users, selling enterprise products, and developing production-ready databases.
                 </p>
                 <p>
                   My professional experience includes working as a Quantitative Trading Intern at 
                   Akuna Capital where I studied options market making strategies and developed features 
-                  for trading models. I've also conducted research at MIT Quest for Intelligence on 
+                  for trading models. I&apos;ve also conducted research at MIT Quest for Intelligence on 
                   clean energy optimization.
                 </p>
                 <p>
-                  I'm particularly interested in projects with social impact, education, and games. 
-                  Currently based in Boston, I frequently travel to New York and San Diego, and I'm 
+                  I&apos;m particularly interested in projects with social impact, education, and games. 
+                  Currently based in Boston, I frequently travel to New York and San Diego, and I&apos;m 
                   always open to exploring interesting projects and collaborations.
                 </p>
               </div>
@@ -204,8 +204,8 @@ export default function About() {
             </div>
             <div className="mt-6 p-4 bg-muted/50 rounded-lg">
               <p className="text-sm text-muted-foreground italic">
-                "I dream of finding inspiration, equality and justice for all, 
-                and one day being able to dunk basketballs and do muscle ups!"
+                &ldquo;I dream of finding inspiration, equality and justice for all, 
+                and one day being able to dunk basketballs and do muscle ups!&rdquo;
               </p>
             </div>
           </motion.div>

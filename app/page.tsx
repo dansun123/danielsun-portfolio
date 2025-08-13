@@ -24,7 +24,7 @@ export default function Home() {
             className="text-center"
           >
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-heading font-bold mb-6">
-              Hi, I'm <span className="gradient-text">Daniel Sun</span>
+              Hi, I&apos;m <span className="gradient-text">Daniel Sun</span>
             </h1>
             <p className="text-xl sm:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto">
               MIT Computer Science graduate passionate about building impactful projects
@@ -86,19 +86,19 @@ export default function Home() {
             </h2>
             <div className="prose prose-lg mx-auto text-muted-foreground">
               <p className="mb-4">
-                I'm a recent MIT graduate with a B.S. in Computer Science and Engineering. 
+                I&apos;m a recent MIT graduate with a B.S. in Computer Science and Engineering. 
                 My journey in tech started late but has been incredibly rewarding - from 
                 learning web development in 2020 to creating multiple successful projects 
                 that solve real problems.
               </p>
               <p className="mb-4">
-                I've worked as a Quantitative Trading Intern at Akuna Capital, developed 
+                I&apos;ve worked as a Quantitative Trading Intern at Akuna Capital, developed 
                 features for trading models, and conducted research at MIT Quest for Intelligence. 
                 My technical expertise spans full-stack development, machine learning, and 
                 data science.
               </p>
               <p>
-                Beyond coding, I'm passionate about education, social impact, and games. 
+                Beyond coding, I&apos;m passionate about education, social impact, and games. 
                 I love dancing, climbing, and continuously learning new things. Currently 
                 based in Boston, I frequently travel to New York and San Diego.
               </p>
